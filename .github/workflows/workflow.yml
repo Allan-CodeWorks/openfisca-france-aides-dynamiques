@@ -1,4 +1,4 @@
-name: Country-Template
+name: France-Aides-Dynamiques
 
 on:
   push:
@@ -74,7 +74,7 @@ jobs:
         with:
           path: ${{ env.pythonLocation }}
           key: build-${{ env.pythonLocation }}-${{ hashFiles('setup.py') }}-${{ github.sha }}
-      - run: openfisca test --country-package openfisca_country_template openfisca_country_template/tests
+      - run: openfisca test --country-package openfisca_france-aides-dynamiques openfisca_france-aides-dynamiques/tests
 
   test-api:
     runs-on: ubuntu-20.04
